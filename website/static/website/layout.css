@@ -1,0 +1,261 @@
+body {
+    background-color: #faf5e5;
+}
+
+/*header*/
+.websiteName {
+    display: flex;
+    font-family: "Questrial", sans-serif;
+    font-size: 25px;
+    position: relative;
+    right: 500px;
+    margin-top: 25px;
+    color: #126656;
+    font-weight: bold;
+}
+
+.websiteName a {
+    text-decoration: none;
+    color: #126656;
+}
+
+.navbar {
+    position:static;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 50px 10px;
+    
+}
+
+.navbar-items {
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin-top: 25px;
+    right: 125px;
+}
+
+.navbar-items li {
+    margin-right: 40px;
+    
+}
+
+.navbar-items li a {
+    text-decoration: none;
+    color: #126656
+}
+
+.fit-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 1500px; /* Adjust the desired height */
+}
+/* Intro */
+.Intro {
+    text-align: center;
+}
+
+.IntroWords {
+    display: block;
+    font-family: "Questrial", sans-serif;
+    font-weight: 340;
+    margin: 0 auto;
+    font-size: 90px;
+    color: #126656;
+}
+
+.IntroLine {
+    color: #126656;
+    font-family: "Questrial", sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    font-weight: 300;
+}
+/*Get Started button*/
+.custom-btn {
+    background-color: #126656;
+    border-radius: 20px;
+    width: 200px;
+    height: 43px;
+    font-weight: 300;
+}
+
+.custom-btn:hover {
+    background-color: #faf5e5;
+    color: #126656;
+    border: #126656 solid;
+}
+
+/* design about section*/
+#about_section {
+    font-family: 'Open Sans', sans-serif;
+    color: #126656;
+    position: relative;
+}
+
+.diffSection {
+    width: 100%;
+    /*position: relative;*/
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+.about-content .side-text {
+    width: 650px;
+    padding: 50px 40px;
+    background: #faf5e5;
+    box-shadow: 2px 0 100px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    text-align: justify;
+    line-height: 22px;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 1s ease-in-out;
+}
+.about-content .side-text-appear {
+    opacity: 1;
+    transform: translateX(0px);
+}
+.about-content .side-text h2 {
+    padding: 10px;
+}
+.about-content .side-text p {
+    padding: 10px;
+}
+
+.about-content .side-image {
+    display: inline-block;
+    width: 400px;
+}
+
+.about-content .side-image img {
+    width: 90%;
+    border-radius: 50%;
+}
+.sideImage {
+    transform: translateX(100px);
+    opacity: 0;
+    transition: .8s ease-in-out;
+}
+.sideImage-appear {
+    opacity: 1;
+    transform: translateX(0px);
+}
+/*Design blog page*/
+.news-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.custom-row {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-inline-start: 20px;
+}
+  
+.suggested-cards {
+    flex: 1;
+    border-left: 1px solid #000;
+    padding-left: 10px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    max-width: 600px; /* Adjust the desired maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 10px);
+    width: 18rem; 
+    display: flexbox; 
+    grid-template-columns: repeat(auto-fit);
+    grid-gap: 18px; border-radius: 10%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+  
+  
+
+.blogIntroWords {
+    text-align: center;
+    font-size: 22.6px;
+    color: #B6743E;
+    font-family: "Questrial", sans-serif;
+    font-weight: 300;
+}
+
+.blogIntroLine {
+    text-align: center;
+    font-size: 60px;
+    color: #126656;
+    font-family: "Questrial", sans-serif;
+    font-weight: 300;
+}
+  
+.blogIntroLines {
+    text-align: center;
+    color: #126656;
+    font-family: "Questrial", sans-serif;
+    font-weight: 300;
+    padding-top: 14px;
+    padding-bottom: 60px;
+}
+.semi-background {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    
+}
+
+.article-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.article-meta {
+    font-size: 14px;
+    color: #888888;
+    margin: 0;
+}
+
+.article-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.article-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.article-description {
+    border-left: 1px solid #000;
+    font-weight: bold;
+    padding-left:13px;
+    font-size: 19px;
+}
+

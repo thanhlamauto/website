@@ -1,0 +1,35 @@
+{% extends "website/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="Intro">
+    <h1 class="IntroWords">Study Effectively</h1>
+    <h1 class="IntroWords">&amp; Beautifully</h1>
+    <p class="IntroLine">Ôn thi digital SAT provides learners with knowledge and resources for the new Digital SAT.</p>
+    <button type="button" class="btn btn-primary custom-btn">Get Started</button>
+</div>
+
+<div>
+    <picture>
+        <img src="{% static 'website/index.webp' %}" alt="My Image" class="fit-image">
+    </picture>
+</div>
+
+<div class="diffSection" id="about_section">
+    <center><p style="font-size: 50px; padding: 60px">About</p></center>
+    <div class="about-content">
+        <div class="side-image" >
+            <img class="sideImage" src="{% static 'website/avatar.jpeg' %}">
+        </div>
+        <div class="side-text">
+            <h3>Xin chào!</h3>
+            <p>Cảm ơn bạn đã ghé thăm website của <em>Ôn thi digital SAT</em>. Tuy rằng website vẫn còn nhiều điểm cần hoàn thiện nhưng vẫn đủ để có thể giúp cho việc chia sẻ những kiến thức và kinh nghiệm của mình đến với mọi người một cách dễ dàng hơn.<br><br> <em>Ôn thi digital SAT</em> bắt đầu là một fanpage Facebook từ cuối năm 2022 và dần phát triển thêm thành kênh Youtube và Website chia sẻ chủ yếu về cách học tiếng Anh nói chung và SAT nói riêng. <br><br><em>Ôn thi digital SAT</em> được sáng lập bởi Nguyễn Thanh Lâm - Học sinh hệ song ngữ Anh-Nga trường THPT Chuyên Nguyễn Huệ, 1550 digital SAT scorer.</p>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}
+{% block script %}
+<script src="{% static 'website/script.js' %}"></script>
+{% endblock %}

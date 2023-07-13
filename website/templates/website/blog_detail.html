@@ -1,0 +1,23 @@
+{% extends "website/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div class="semi-background">
+    <div class="article-container">
+        <h1 class="article-title">{{ article.title }}</h1>
+        <p class="article-meta">Published on {{ article.timestamp }}</p>
+        <img src="{{ article.photo.url }}" alt="Article Image" class="article-image">
+        <div class="article-description">
+            {{article.description}}
+        </div>
+        <div class="article-content">
+          <!-- Content goes here -->
+          {{ html_content|safe|urlize }}
+        </div>
+      </div>
+</div>
+    
+{% endblock %}
+{% block script %}
+<script src="{% static 'website/script.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "website/layout.html" %}
+{% load static %}
+
+{% block title %}
+BLOG - Ôn thi digital SAT
+{% endblock %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static 'website/layout.css' %}">
+<h1 class="blogIntroWords">News &amp; Advices</h1>
+<p class="blogIntroLine">Welcome to <br>My Personal Blog</p>
+<p class="blogIntroLines">Nơi mình chia sẻ những kinh nghiệm, kiến thức trong quá trình học SAT. Mình khuyến khích <br> với những bạn mới tiếp xúc với SAT nên đọc những bài mình giải thích đề SAT là gì và nó <br>test kỹ năng nào. Sau đấy các bạn có thể đọc những bài viết đi vào từng kỹ năng cụ thể. </p>
+<div class="news-layout">
+    <div class="row custom-row">
+      
+      <!-- Latest cards here -->
+        {% for post in posts_of_the_page %}
+        <div class="col-md-1 mb-1 card-container" >
+        <a href="{% url 'website:post_detail' post.id %}" style="padding: 8px;text-decoration: none;
+        color: #126656;">
+            <div class="card" >
+                {% if post.photo %}
+                <img src="{{ post.photo.url }}" class="card-img-top" style="border-top-left-radius: 10%; border-top-right-radius: 10%; height: 200px; object-fit: cover;" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    <p class="card-timestamp"> {{post.timestamp}} </p>
+                    <h5 class="card-title">{{ post.title }}</h5>
+                    <small class="card-category">Category: {{post.tag}}</small>
+                </div>
+            </div>
+        </a>
+      </div>
+        {% endfor %}
+      
+    </div>
+    <div class="suggested-cards">
+      <h3 style="color: #126656; font-family: "Questrial", sans-serif; font-weight: 300;">Suggested for you</h3>
+      <!-- Suggested cards here -->
+      {% for suggested_post in suggested_posts %}
+      <a href="{% url 'website:post_detail' suggested_post.id %}" style="padding: 3px; text-decoration: none;color: #126656;">
+        <div class="card mb-3" style="max-width: 240px; height: 60px; ">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{ suggested_post.photo.url }}" class="img-fluid rounded-start" alt="..." style="border-radius:10%; height: 56px; object-fit: cover;">
+            </div>
+            <div class="col-md-8">
+              <div style="padding: 0px;" class="card-body">
+                <h5 style="font-size: 10px;" class="suggested_card-title">{{suggested_post.title}}</h5>
+                <p style="font-size: 9px;" class="suggested_card-text"><small class="text-body-secondary">{{suggested_post.timestamp}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </a>
+      
+      {% endfor %}
+
+      <form action="{% url 'website:displayCategory' %}" method="POST">
+        {% csrf_token %}
+        <label for="category">Category:</label>
+           <select name="category" id="category">
+                <option value="All" selected>All</option>
+                <option value="Information">Information</option>
+                <option value="Skills">Skills</option>
+                <option value="Resources">Resources</option>
+           </select>
+           <button type="submit" class="btn btn-primary">Sort</button>
+      </form>
+    </div>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination d-flex justify-content-center">
+      {% if posts_of_the_page.has_previous %}
+      <li class="page-item"><a class="page-link" href="?page={{posts_of_the_page.previous_page_number}}">Previous</a></li>
+      {% endif %}
+      {% if posts_of_the_page.has_next %}
+      <li class="page-item"><a class="page-link" href="?page={{posts_of_the_page.next_page_number}}">Next</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+
+
+</div>
+
+
+{% endblock %}
+{% block script %}
+<script src="{% static 'website/script.js' %}"></script>
+{% endblock %}
