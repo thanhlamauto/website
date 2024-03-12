@@ -1,17 +1,31 @@
 body {
     background-color: #faf5e5;
+    margin: 0;
+    padding: 0;
 }
 
 /*header*/
+
+
+.navbar {
+    height:12%;
+    display:flex;
+    align-items: center;
+    padding-left:8%;
+    padding-right:8%;
+    margin-bottom:3%;
+    margin-top:2%;
+}
+
 .websiteName {
     display: flex;
     font-family: "Questrial", sans-serif;
     font-size: 25px;
     position: relative;
-    right: 500px;
-    margin-top: 25px;
+    margin-top: 0.6%;
     color: #126656;
     font-weight: bold;
+    width:40%
 }
 
 .websiteName a {
@@ -19,30 +33,26 @@ body {
     color: #126656;
 }
 
-.navbar {
-    position:static;
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 10px 50px 10px;
-    
-}
-
 .navbar-items {
+    justify-content: right;
+    height: 29.999998;
+    width: 30%;
+    display:flex;
+    margin: 0;
     position: relative;
     list-style: none;
-    display: flex;
-    margin-top: 25px;
-    right: 125px;
+
 }
 
 .navbar-items li {
-    margin-right: 40px;
-    
+    margin-left: 40px;
+    line-height: 30px;
 }
 
 .navbar-items li a {
     text-decoration: none;
-    color: #126656
+    color: #126656;
+    direction: rtl;
 }
 
 .fit-image {
@@ -59,7 +69,7 @@ body {
 .IntroWords {
     display: block;
     font-family: "Questrial", sans-serif;
-    font-weight: 340;
+
     margin: 0 auto;
     font-size: 90px;
     color: #126656;
@@ -163,7 +173,7 @@ body {
     gap: 10px;
     padding-inline-start: 20px;
 }
-  
+
 .suggested-cards {
     flex: 1;
     border-left: 1px solid #000;
@@ -172,22 +182,22 @@ body {
 
 .card-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     max-width: 600px; /* Adjust the desired maximum width */
     margin: 0 auto; /* Center the container horizontally */
 }
 
 .card {
     flex: 0 0 calc(33.33% - 10px);
-    width: 18rem; 
-    display: flexbox; 
+    width: 18rem;
+    display: flexbox;
     grid-template-columns: repeat(auto-fit);
     grid-gap: 18px; border-radius: 10%;
     margin-right: 5px;
     margin-bottom: 5px;
 }
-  
-  
+
+
 
 .blogIntroWords {
     text-align: center;
@@ -204,7 +214,7 @@ body {
     font-family: "Questrial", sans-serif;
     font-weight: 300;
 }
-  
+
 .blogIntroLines {
     text-align: center;
     color: #126656;
@@ -225,7 +235,7 @@ body {
     margin: 0 auto;
     padding: 30px;
     background-color: #ffffff;
-    
+
 }
 
 .article-title {
@@ -259,3 +269,123 @@ body {
     font-size: 19px;
 }
 
+.containerForm {
+    max-width: 1200px;
+}
+
+.rowForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.col-lg-4 {
+    flex: 0 0 40%;
+    max-width: 40%;
+    padding-left: 7%
+}
+
+.col-lg-8 {
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.resources-layout {
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.featureCardsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 10%;
+    margin-top: 4%;
+    width: 100%
+}
+
+.custom-card {
+    position: sticky;
+    top: 40%;
+}
+
+.features-section {
+    position: sticky;
+    top: 6%;
+}
+
+footer {
+    background: #CCDEE2;
+    padding: 50px 0;
+}
+
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 33.333334%;
+    padding: 0 25px;
+    margin-bottom: 90px;
+}
+
+.footer-col h4 {
+    font-size: 25px;
+    color: #126656;
+    font-family: "Questrial", sans-serif;
+    margin-bottom: 30px;
+}
+
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+    font-family: "Questrial", sans-serif;
+	text-transform: capitalize;
+	color: #126656;
+	text-decoration: none;
+	font-weight: 300;
+	color: #126656;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+
+/*responsive*/
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+}
+}

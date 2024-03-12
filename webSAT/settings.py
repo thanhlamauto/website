@@ -136,9 +136,3 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
 
-CRONJOBS = [
-    ('0 0 * * *', 'website.views.blog')  # Schedule the task to run at 0:00
-]
-
-CKEDITOR_UPLOAD_PATH = 'website/images/blogCover'  # Path to store uploaded images
-CKEDITOR_IMAGE_BACKEND = 'pillow'  # Optional: Use 'pillow' for image manipulation (requires Pillow library)

@@ -12,7 +12,7 @@ BLOG - Ôn thi digital SAT
 <p class="blogIntroLines">Nơi mình chia sẻ những kinh nghiệm, kiến thức trong quá trình học SAT. Mình khuyến khích <br> với những bạn mới tiếp xúc với SAT nên đọc những bài mình giải thích đề SAT là gì và nó <br>test kỹ năng nào. Sau đấy các bạn có thể đọc những bài viết đi vào từng kỹ năng cụ thể. </p>
 <div class="news-layout">
     <div class="row custom-row">
-      
+
       <!-- Latest cards here -->
         {% for post in posts_of_the_page %}
         <div class="col-md-1 mb-1 card-container" >
@@ -31,14 +31,14 @@ BLOG - Ôn thi digital SAT
         </a>
       </div>
         {% endfor %}
-      
+
     </div>
     <div class="suggested-cards">
-      <h3 style="color: #126656; font-family: "Questrial", sans-serif; font-weight: 300;">Suggested for you</h3>
+      <h3 style="color: #126656; font-family: 'Questrial', sans-serif; font-weight: 300;">Suggested for you</h3>
       <!-- Suggested cards here -->
       {% for suggested_post in suggested_posts %}
       <a href="{% url 'website:post_detail' suggested_post.id %}" style="padding: 3px; text-decoration: none;color: #126656;">
-        <div class="card mb-3" style="max-width: 240px; height: 60px; ">
+        <div class="card mb-3 " style="max-width: 100%; height: 60px; ">
           <div class="row g-0">
             <div class="col-md-4">
               <img src="{{ suggested_post.photo.url }}" class="img-fluid rounded-start" alt="..." style="border-radius:10%; height: 56px; object-fit: cover;">
@@ -52,7 +52,7 @@ BLOG - Ôn thi digital SAT
           </div>
         </div>
     </a>
-      
+
       {% endfor %}
 
       <form action="{% url 'website:displayCategory' %}" method="POST">

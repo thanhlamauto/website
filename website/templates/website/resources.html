@@ -14,7 +14,7 @@
 font-family: sans-serif;
 font-size: 35px;
 position: relative;
-left: 55px;
+padding-left: 7%;
 margin-top: 25px;
 color: #126656;">Books</h3>
 <div class="resources-layout">
@@ -41,25 +41,51 @@ color: #126656;">Books</h3>
 font-family: sans-serif;
 font-size: 35px;
 position: relative;
-left: 55px;
+padding-left: 7%;
 margin-top: 25px;
 color: #126656;">Exercises</h3>
 
-<div class="container mt-3">
-  <h2>Dropdown with Google Form</h2>
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Open Google Form
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScE-798dhYKkqmBv9ImuL22DWRRZThIO5l-GiSd-DMYG9SV7w/viewform?embedded=true" width="640" height="6068" frameborder="0" marginheight="0" marginwidth="0">Đang tải…</iframe>
+
+<div class="containerForm mt-5">
+  <div class="rowForm">
+    <div class="col-lg-4">
+      <!-- Bootstrap Dropdown Button to select the Google Form -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="formDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Các câu hỏi được recycled từ paper SAT
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="formDropdown">
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSfueChXm4oYeHsmr-ja8U3j5V38SLS0M0CpsL_S8DT-RcWx2g/viewform?usp=sf_link">Test 1</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLScURzvr1RaHIQPaf4wydkM8SdlasejoQhAlgzEptFY37n7t4g/viewform?usp=sf_link">Test 2</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSckUL8rEKKkKoKei_qLfYl-YIfCtaGThi-4MJQKq32ShtFAAg/viewform?usp=sf_link">Test 3</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSf02_ApjFdBuAAvVRQmp6Urevgwskrbiv9NoVAX8HedL-voRA/viewform?usp=sf_link">Test 4</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSeMqJldAcbB-wEN8ZfV0Ul_Y3jBbMMe9cWtcWsRaT6I-BCn7g/viewform?usp=sf_link">Test 5</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSe3BhsV-oQnlQQ82fYuFyF4m7U_20a_oFg98D-42roCBjCxRg/viewform?usp=sf_link">Test 6</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLScE-798dhYKkqmBv9ImuL22DWRRZThIO5l-GiSd-DMYG9SV7w/viewform?usp=sf_link">Test 7</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSfxV_YvdLhm1vFVGUqhyTUv4ED3x3ZvjHZa0AzRD8tjRV92Mg/viewform?usp=sf_link">Test 8</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSeYQZXEYqOx9pjZBqIQ7wgu6jl4ryAblqTd1miPvkrIXlXGwA/viewform?usp=sf_link">Test 9</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSeM0rYlPBIaa1ahe-5kKWkmVmF32XTq3jheJpCHHywcuRSGBA/viewform?usp=sf_link">Test 10</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLSdItar0YXKnq3whg3vJC-RGf2Sq9hO57MRuSJGPosU4i0XcCw/viewform?usp=sf_link">Test 11</a></li>
+          <li><a class="dropdown-item" href="#" data-formurl="https://docs.google.com/forms/d/e/1FAIpQLScMc3ZBJM3Lsj1l0FfJLX61udFNWRIwLdk070iV1ZjvWks43A/viewform?usp=sf_link">Test 12</a></li>
+          
+          <!-- Add more dropdown items for the other Google Forms -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <!-- Container to hold the embedded Google Form code -->
+      <div id="formContainer"></div>
     </div>
   </div>
 </div>
-    
+
+<!-- Container to hold the embedded Google Form code -->
+<div id="formContainer" style="width: 80%; margin-top: 100px;"></div>
+
 {% endblock %}
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 {% block script %}
 <script src="{% static 'website/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 {% endblock %}
