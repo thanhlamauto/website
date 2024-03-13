@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-sznrg9vfx6=j2n7-58y44crwka^(%1rbzzo=5(=$=cg3ifxt3#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['onthidigitalsat.com', 'www.onthidigitalsat.com']
 
 
 # Application definition
