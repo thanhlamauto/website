@@ -183,7 +183,7 @@ body {
 .card-container {
     display: flex;
     justify-content: flex-start;
-    max-width: 600px; /* Adjust the desired maximum width */
+    max-width: 600px;/* Adjust the desired maximum width */
     margin: 0 auto; /* Center the container horizontally */
 }
 
